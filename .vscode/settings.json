@@ -3,5 +3,9 @@
 	"files.eol": "\n",
 	"debug.openDebug": "neverOpen",
 	"python.linting.enabled": false,
-	"python.languageServer": "None"
-}
+	"python.languageServer": "Default",
+	"editor.suggestOnTriggerCharacters": true,
+	"editor.acceptSuggestionOnEnter": "on",
+	"editor.suggestSelection": "first",
+	"editor.parameterHints.enabled": true
+	}

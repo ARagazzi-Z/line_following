@@ -1,14 +1,14 @@
-from functions.py import *
-from imports.py import *
+from functions import *
+from imports import *
 
 speed = 150
 turn = 0
 
 while True:
     robot.drive(speed, turn)
-    if scor.color() == Color.GREEN:
-        robot drive(speed,tur)
-    elif scor.color() == Color.YELLOW:
+    if lscor.color() == Color.GREEN:
+        robot.rive(speed,turn)
+    elif rcor.color() == Color.YELLOW:
         speed /= 2
         robot.drive(speed, turn)
     elif scor.color() == Color.RED:
@@ -22,6 +22,5 @@ while True:
         lm.brake()
         rm.brake()
 
-dfdsfdsafdsafdsfd
 
 
