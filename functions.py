@@ -1,16 +1,18 @@
 from imports import *
 ev3 = EV3Brick()
 
+wd = wheel_diameter= 4
+at = axle_track= 5
+lm = Motor(Port.B)
+rm = Motor(Port.C)
 robot = DriveBase(lm, rm, wd, at)
-wd = wheel_diameter=?
-at = axle_track=?
-lm = Motor(Port.X)
-rm = Motor(Port.Y)
+sm = Motor(Port.D)
+gm = Motor(Port.A)
 
-gyro = GyroSensor(Port.SY)
-ultras = UltrassonicSensor(Port.SX)
-lscor = ColorSensor(Port.SW)
-rscor = ColorSensor(Port.SZ)
+gyro = GyroSensor(Port.S1)
+ultras = UltrasonicSensor(Port.S2)
+lscor = ColorSensor(Port.S3)
+rscor = ColorSensor(Port.S4)
 
 #CALIBRATION OF THE GYRO TO PREVENT DYNAMIC DRIFT
 #Change from speed() (deg/sec) to angle() (deg) or from angle to speed.
@@ -24,7 +26,7 @@ def dynam_gauge():
 
 #CALIBRATION OF THE GYRO TO PREVENT STATIC DRIFT
 #Calculates the difference between the reference(that the robot should have gone) and the drift (the wrong drift)
-ref = angle the robot should have gone at that moment
+ref = 0 # the robot should have gone at that moment
 def static_gauge():
     drift = ref - gyro.angle()
 
@@ -37,7 +39,7 @@ def scor_reflection_data():
     x = lscor.reflection()
     y = rscor.reflection()
 
-    ev3.screen.print('esquerda:' x)
-    ev3.screen.print('direita:' y)
+    ev3.screen.print('esquerda:')(x)
+    ev3.screen.print('direita:')(y)
 
 # Escreve na tela a quantidade de luz refletida que cada sensor está vendo
