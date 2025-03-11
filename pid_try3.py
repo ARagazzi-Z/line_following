@@ -60,5 +60,5 @@ while True:
         else: 
             pass
 
-
+motor.stop()
 
