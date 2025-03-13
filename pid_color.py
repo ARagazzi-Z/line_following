@@ -1,5 +1,5 @@
-from functions.py import *
-from imports.py import *
+from functions import *
+from imports import *
 
 kp = 25
 # P (Proporcional): Multiplica o erro por kp para corrigir a direção.
@@ -15,7 +15,8 @@ count = 0
 while True:
     error = lscor.color() - rscor.color()
     P = error * kp
-    I = (integral += error)* ki
+    integral += error
+    I = integral * ki
     D = (error - last_error)* kd
     turn = P + I + D 
     

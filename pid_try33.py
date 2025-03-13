@@ -49,8 +49,10 @@ while True:
 
     if count == 3:
         if lscor.color() == Color.GREEN:
+                robot.straight(30)
                 gyro_90neg()
         elif rscor.color() == Color.GREEN:
+                robot.straight(30)
                 gyro_90()
                 count = 0
 
@@ -106,5 +108,18 @@ while True:
         robot.straight(30)
     else:
         pass
+
+
+    if ultras.distance() <= 40:
+        robot.straight(-20)
+        gyro_90()
+        robot.straight(80)
+        gyro_90neg()
+        robot.straight(200)
+        gyro_90neg()
+        robot.straight(80)
+        gyro_90()
+        robot.straight(-50)
+
 
 

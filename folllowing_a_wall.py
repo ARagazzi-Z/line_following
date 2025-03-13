@@ -1,5 +1,5 @@
-from functions.py import *
-from imports.py import *
+from functions import *
+from imports import *
 
 while True:
     if ultras.distance() < 100:

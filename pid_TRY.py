@@ -1,12 +1,12 @@
-from functions.py import *
-from imports.py import *
-from gyro_turn.py import gyro_90
+from functions import *
+from imports import *
+from gyro_turn import gyro_90
 
-    """
+"""
      P (Proporcional): Multiplica o erro por kp para corrigir a direção.
      I (Integral): Acumula pequenos erros ao longo do tempo.
      D (Derivada): Reage a mudanças rápidas no erro para evitar oscilações.
-    """
+"""
 # PID - color sensor
 kp = 3
 ki = 0
@@ -15,6 +15,7 @@ kd = 6.5
 last_error = 0
 integral = 0
 count = 0
+speed = 30 
 
 while True:
     error = lscor.reflection() - rscor.reflection()
